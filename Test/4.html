@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4page</title>
+    </head>
+    <body>
+         <header>
+            <h1>시맨틱태그</h1>
+
+         </header>
+         <nav>
+             <h3>목차</h3>
+              <li><a href="#1article">1</a></li>
+              <li><a href="#2article">2</a></li>
+              <li><a href="#1article">3</a></li><hr>
+         </nav>
+         <section>
+             <article id="1article">
+              <h3>1article</h3>  
+                <details>
+                     <summary>details</summary>
+                      <p>details는 블록태그</p>
+                      <p>summary는 제목</p>
+                 </details>
+             </article>
+             <figure>
+                 <figcaption>제목:computerisbest</figcaption>
+                  <img src="detail/computerisbest.jpg" width="250" height="120">
+             </figure>
+             <article id="2article">
+               <h3>2article</h3>    
+                 <p>
+                     article section2
+                 </p>
+             </article>
+             <article id="3article">
+                <h3>3article</h3>    
+                  <mark>밑줄</mark>
+                  <time>05:00</time>
+                  <meter value="0.8" max="1.0"></meter>
+                  <progress value="2" max="10"></progress>
+              </article>
+         </section>
+         <aside>
+            <h3>aside</h3>
+             <form name="fo" method="get">
+                   사용자 이름 : <input type="text" maxlength="15" size="10" value="3글자 이상"><br>
+                   비밀번호 : <input type="password" size="15" value="">
+                 <input type ="submit" value="완료"><br><br>          
+                     장문텍스트 : <textarea rows="5" cols="10" wrap="HARD"></textarea><br><br><hr>
+                     체크박스1<input type="checkbox" name="checkbox" value="check1">
+                     체크박스2<input type="checkbox" name="checkbox" value="check2">  
+                     체크박스3<input type="checkbox" name="checkbox" value="check3"><br>  <!-- value는 서버랑 관련, 다 다르게 지정해야함--> <!--"체크박스1"를 캡션이라고 함--> <!--checkbox는 각각 선택 가능-->
+                     라디오박스1<input type="radio" name="radio" value="radio1">
+                     라디오박스2<input type="radio" name="radio" value="radio2">
+                     라디오박스3<input type="radio" name="radio" value="radio3"><br> <!-- radio는 반드시 name 속성을 설정, 같은 name 속성 중 하나만 선택 가능!-->
+                     콤보박스
+                 <select size="1"> <!-- select는 드롭박스, size속성은 보이게 하는 최대 선택 수-->
+                     <option value="option1">항목1</option>
+                     <option selected>항목2</option> <!--selected는 처음 선택되어있는 항목-->
+                     <option>항목3</option>
+                 </select><br>
+                 <input type="text" list="datalist"> <!--*중요!:input태그의 list속성과 datalist의 id속성으로 연결/text와 select를 합친 것임-->
+                     <datalist id="datalist">
+                      <option value="리스트1">
+                      <option value="리스트1">
+                      <option>리스트3</option>
+                    </datalist>
+                 <input type="color" value="#0000FF"> <!--value는 초기색-->
+                 <input type="datetime-local" value="2020-10-25T15:51"> <!--value는 초기날짜, 정해진 형식 지켜야함-->
+                 <input type="number" min="0.0" max="10.0" step="0.5"><br>
+                 <input type="range" min="0" max="100" list="range">
+                     <datalist id="range">
+                        <option value="10" label="Low">
+                        <option value="90" label="HIGH"></option>
+                     </datalist><br>
+                 <form>
+                     <fieldset>
+                         <legend>형식을 가진 텍스트 입력</legend>
+                          <input type="email" placeholder="user@example.com"><br>
+                          <input type="search" placeholder="검색어를 입력하세요">
+                          <input type="submit">
+                     </fieldset>
+                    
+
+                 </form>   
+                 
+
+             </form>
+
+         </aside>
+         <footer>
+            <h3>footer</h3>
+             <p>2020.10.25/04:54 시험공부 중</p>
+
+         </footer>
+    </body>
+</html>
