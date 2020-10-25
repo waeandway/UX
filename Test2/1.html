@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css 연습 page</title>
+         <link href="1.css" type="text/css" rel="stylesheet"> <!--우선순위 중요 : style속성 > style태그 > sytle파일-->
+          <style>
+            body{
+                font-family: Arial, serif, 'Times New Roman';
+                font-size : 15px; 
+                font-style: italic;
+                font-weight: normal; /*100~900 숫자 혹은 normal, bold, lighter 중 지정*/
+            }
+            
+            h3{
+                font : 2em Arial; /*font 단축속성, 순서지켜야함, 사이즈,패밀리는 필수 값, 나머진 생략가능: font-style, font-weight, font-size, font-family */
+                color: firebrick;
+                
+            }
+            h4.class{
+                color: green;
+            }
+            /* class vs id : class는 집합,id는 고유값*/
+            #id1 {
+                color: greenyellow;
+            }
+            
+            
+
+            div > h2 { /*부모 > 직계자손*/
+                color: palevioletred;
+            }
+
+            div h3  { /*조상 > 자손*/
+                color: fuchsia;
+                text-align: center;
+            }
+
+            input[type=text] { /* A[B=C], 속성 B의 값이 C인 A태그에만 스타일 적용 */
+                font-size: 20px;
+                
+            }
+
+            input:focus {
+                color:dodgerblue;
+            }
+
+            #p1::first-letter{
+                color: darkviolet;
+            }
+
+            #a1:link{
+                color: deeppink;
+                }
+
+            #a1:visited{
+                color: deepskyblue;
+                }
+
+            div.box1{
+                background-color: gold;
+                width: 80px;
+                border-style : solid;
+                border-color: gray;
+                border-width: 30px;  /*border: width style color -전체 단축*/
+                border-radius: 10px 10px 50px 50px; 
+                padding: 20px;
+                
+
+            }
+
+            div.box1 span {
+                background: grey;
+                
+            }
+
+            div.box2{
+                
+                width : 200px;
+                height: 200px;
+                background: hotpink;
+                background-size: 100px 100px; /*가로 세로*, 이미지 조정*/
+                background-image: url("computerisbest.jpg");
+                background-repeat: repeat-x;
+                background-position: center; /*background : color image position/size repeat origin - 단축프로퍼티, 순서지켜야함*/
+            }
+/*....................................................................................................................................*/
+            div.shadow span {       
+                background-color: rgb(238, 255, 0); /*콘텐츠*/
+                display: block;
+            }
+            
+            div.shadow {
+                padding: 10px; /*padding*/
+                border: 10px dotted pink; /*border*/
+                margin-left: 500px; /*margin*/
+                margin-right: 700px;             
+            }
+
+            div div {
+                display: inline-block;
+                background-color: powderblue;
+                width: 100px;
+                height: 100px;
+                border: 10px solid gray;
+                float: left;
+            }
+            
+            div div#position:hover {
+                position: relative;
+                left: 10px;
+                bottom: 10px;
+            }
+
+                      
+          </style>
+    </head>
+    <body>   
+        <h2 style="color: darkslateblue;">css</h2>
+        <h2>css</h2>
+        <h3>css2</h3>
+        <h3>css3</h3>
+      <div>
+        <h2>css</h2>
+        <span><h3>css</h3></span>
+      </div>
+      <br>
+        <h4 class="class">class1</h4>
+        <h4 class="class">class2</h4>
+        <h5 class="class">class2</h3>
+        <h6 id="id1">id1</h6>
+      <br>
+        <input type="text" value="초기값"> 
+        <p id="p1">가상 셀렉터</p> 
+        <a href="C:/web/Test/1.html" id="a1">이전 페이지</a> 
+      <br>
+        <div class="box1">
+            <span>DIVDIVDIV</span>
+        </div> 
+        <div class="box2">
+            
+        </div>
+       <br>
+        <div class="shadow">
+           <span>Drop shadow</span>
+        </div> 
+        <br>
+        <div>
+            <div id="position">inline DIV</div>
+            <div>inline DIV</div>
+            <div>inline DIV</div>
+        </div> 
+    </body>
+</html>
