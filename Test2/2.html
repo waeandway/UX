@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #list{
+                list-style: decimal ; /*liststyle-type list-style-position list-style-image*/
+            }
+
+            #menu{/*menu 셀렉터 생성*/
+                background: rosybrown; 
+            }
+
+            #menu ul{/*메뉴를 한줄에 출력 준비*/
+                width: 567px;
+                margin:0;
+                padding:0;
+            }
+
+            #menu ul li{
+                display: inline-block;  /* 가장 중요, 인라인 블록 프로퍼티*/
+            }
+            
+            #menu a{
+                text-decoration: none;
+            }
+
+            #menu a:hover{
+                color: red;
+            }
+
+            table{
+               
+                border-collapse: collapse;
+            }
+
+            td, th{
+                text-decoration: none;
+                text-align: center;
+                height: 40px;
+                width: 40px;
+                padding: 5px;
+            }
+
+            thead{
+                background-color: gray;
+                border-bottom: 1px solid;
+            }
+
+            thead:hover{
+                background-color: purple;
+            }
+
+            tbody td{
+                border-bottom: 1px solid;
+
+            }
+            tbody tr:nth-child(even){
+                background-color: gray;
+            }
+
+            input[type=text]{
+                border: 1px solid lightblue;
+                border-radius: 2px;
+            }
+
+            input :focus{
+                background-color:lightcoral;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <h3>리스트</h3>
+          <ul id="list">
+              <li>리스트1</li>
+              <li>리스트2</li>
+              <li>리스트3</li>
+          </ul>
+        <br>
+         <h2>메뉴바 만들기</h2>
+          <nav id="menu">
+              <ul>
+                  <li><a href="1.html">1</li>
+                  <li><a href="">2</li>
+              </ul>
+          </nav>
+        <br>
+        <table>
+            <thead>
+               <tr><th>1</th><th>2</th><th>2</th></tr>
+            </thead>
+            <tbody>
+               <tr><td>1</td><td>2</td><td>2</td></tr>
+               <tr><td>1</td><td>2</td><td>2</td></tr>
+           </tbody>
+        </table>
+        <br>
+         <form>
+            <input type="text" placeholder="따라 입력하세요">
+            <input type="email" placeholder="user@example.com">
+         </form>
+    </body>
+</html>
