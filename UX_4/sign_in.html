@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+    </head>
+    <body>
+        <h2>회원 가입</h2><hr><br>
+          <form name="fo" method="get">
+            <fieldset>
+              <legend>기본정보</legend><br> 
+                 학번 : <input type="text" size="10" maxlength="10" value="" placeholder="2000100100"><br><br>
+                 성별 : <label>남자<input type="radio" name="gender" value=""></label>&nbsp;
+                        <label>여자<input type="radio" name="gender" value=""></label><br><br>
+                 이름 : <input type="text" size="15" maxlength="20" value=""><br><br>
+                 학과 : <select name="major">
+                          <option value="" selected>--소속학과 선택--
+                          <option value="">컴퓨터공학과
+                          <option value="">소프트웨어학과
+                        </select><br><br>
+                 학년 : <label>1학년<input type="radio" name="year" value=""></label>
+                        <label>2학년<input type="radio" name="year" value=""></label>
+                        <label>3학년<input type="radio" name="year" value=""></label>
+                        <label>4학년<input type="radio" name="year" value=""></label><br><br>
+            </fieldset><br>  
+            
+            <fieldset>
+                <legend>가입정보</legend><br>
+                 아이디 : <input type="text" size="20" maxlength="20" value=""><br><br>
+                 비밀번호 : <input type="password" size="20" maxlength="20" value=""><br><br>
+                 생년월일 : <input type="date" value="0000-00-00"><br><br>
+
+                 도로명 주소 : <input type="text" list="address" placeholder="송파구 양재대로 1218">
+                                 <datalist id="address">
+                                   <option value="송파구 양재대로 1218">
+                                   <option value="노원구 화랑로 815">
+                              </datalist><br><br>
+                 상세 주소 : <input type="text" size="25" maxlength="25" value=""><br><br>
+                 전화번호 : <select name="tel">
+                              <option value="" selected>02
+                              <option value="">031
+                              <option value="">032
+                              <option value="">042     
+                              <option value="">010
+                           </select>-<input type="text" size="4" maxlength="4" value="">-<input type="text" size="4" maxlength="4" value="">
+                        <br><br>
+                 e-mail : <input type="email" placeholder="user@example.com"><br><br>
+                 광고성 SNS 마케팅 수신거부 : 문자<input type="checkbox" name="sns"> 이메일<input type="checkbox" name="sns">
+           </fieldset><br>  
+           <button type="submit" value="">가입완료</button>
+           <input type="reset" value="취소">                              
+          </form><br>
+          <a href="tech.html">이전 페이지로</a>
+    </body>
+</html>
