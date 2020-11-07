@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 연습</title>
+    <script src="index.js"></script> <!--자바스크립트 코드를 별도 파일에 작성-->
+</head>
+<body>
+    <img src="car.jpg" onclick="this.src='tech.jpg'" weight="100" height="100"> <!--html태그의 리스너 속성에 자바스크립트 코드 작성-->
+    <img src="car.jpg" weight="100" height="100" onmouseover="this.src='tech.jpg'" onmouseout="this.src='car.jpg'">
+    <hr>
+    <script> //<script>태그에 자바스크립트 코드 작성
+        function over(obj) {
+            obj.src="tech.jpg";
+        }
+        function out(obj) {
+            obj.src="car.jpg";
+        }
+    </script>
+    <img src="car.jpg" onmouseover="over(this)" onmouseout="out(this)" height="100" weight="100">
+    <hr>
+    <a href="javascript:alert('ㅋ')">클릭하세요</a><!--url부분에 자바스크립트 코드 작성-->
+    <hr>
+    <script>
+        document.write("<h3>document.wirte()는 8장에서 더 자세히")
+    </script>
+    <hr>
+    <script> 
+        var x=100; // 전역변수
+        function f(){
+            var x=1; // 지역변수
+            document.write("지역변수 x="+ x + "<br>");
+            document.write("전역변수 x=" + this.x+ "<br><hr>");
+        }
+        f(); // 함수 호출
+        
+        var y=0x15;
+        document.write(y+"<br>"); // 논리 연산자
+        var t=true, f=false;
+        document.write((t&&f) + "<br>");
+        document.write((t||f) + "<br>");
+        document.write((3>2)&&(3<2) + "<br><hr>");
+
+        var a=5, b=3;
+        var bigger = a>b ? a : b;
+        document.write(bigger);
+       
+    </script>
+
+
+
+
+</body>
+</html>
