@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조건/반복/함수</title>
-    <script src="2.js"></script> <!--자바스크립트 코드를 별도 파일에 작성-->
+    <script src="if_for.js"></script> <!--자바스크립트 코드를 별도 파일에 작성-->
+    <script src="function.js"></script>
 </head>
 <body>
+    <script>
+        var a = adder(10, 20) // adder 함수 호출
+        document.write("<br>10 + 20 = " + a + "<br>")
+
+        var b = evalParseIntIsNaN() // evalParseIntIsNaN 함수 호출
+
+        var n = prompt("원하시는 구구단을 입력하세요", "");
+        gugudan(n); // gugudan 출력 함수 호출
+
+    </script>
     
     
 </body>

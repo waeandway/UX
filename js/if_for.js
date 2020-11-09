@@ -1,4 +1,5 @@
 //조건문
+
 var grade; // if-else, 성적확인
 var score = prompt("점수를 입력하세요", "");
 
@@ -18,6 +19,7 @@ score = parseInt(score); // pareseInt : 문자열을 숫자로
      else{
      grade = "F";
      }
+    
 
 document.write(score + "는" + grade + "입니다.<br>")
 
