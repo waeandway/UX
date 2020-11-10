@@ -1,4 +1,5 @@
 //조건문
+/*
 
 var grade; // if-else, 성적확인
 var score = prompt("점수를 입력하세요", "");
@@ -65,4 +66,4 @@ while(true){ //무한반복
         break; //break문
     a++;    
 }
-document.write(a + "까지 더하면 300을 넘음 : " + b);
+document.write(a + "까지 더하면 300을 넘음 : " + b); */
