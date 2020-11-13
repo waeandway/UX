@@ -73,5 +73,5 @@ c = a.slice(0,1); // slice 메소드 : 배열 [0] <= x < [1] 을 의미
 pr("c = ", c);
 
 c = a.toString(); // toString 메소드 : 배열 a를 "," 로 연결하여 하나의 문자열로 리턴
-pr("c =", c);
+pr("c = ", c);
 
