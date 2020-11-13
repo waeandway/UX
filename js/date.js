@@ -28,7 +28,24 @@ k = now.setFullYear(2020);
  now_f(k, "년도"); // set메소드 오류?
 
 /***************************************************************************************/
+var current = new Date();
+ if(current.getSeconds() % 2 == 0) {
+    document.body.style.backgroundColor = "yellow";
+ }
+ else {
+    document.body.style.backgroundColor = "skyblue";
+ };
 
+function cur_f(method, com) {
+    document.write(method + com + "&nbsp;");
+}
 
+var t;
 
+t = current.getHours();
+cur_f(t, "시");
+t = current.getMinutes();
+cur_f(t, "분");
+t = current.getSeconds();
+cur_f(t, "초");
 
