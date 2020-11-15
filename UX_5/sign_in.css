@@ -1,0 +1,76 @@
+body {
+    background-color:rgba(235, 235, 235, 0.945);
+    color: dimgray;
+    text-shadow: 0px 0px 1px dimgray;
+}
+
+hr {
+    margin: 30%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+h2 {
+    display: inline-block;
+    margin: 45%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 100%;
+    cursor: none;
+    text-align: center;
+    font-size: 2em;  
+}
+
+fieldset {
+    display: inline-block;
+    margin-left: 40%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-style: none;
+}
+
+h2, legend {
+    color: dodgerblue;
+    text-shadow: 0px 0px 1px black;
+    cursor: none;
+}
+
+button {
+    display: inline-block;
+    border-style: none;
+    cursor: pointer;
+    color: dodgerblue;
+    background-color: rgba(235, 235, 235, 0.945);
+    text-shadow: 0px 0px 1px black;
+}
+
+button[type="submit"] {
+    margin-top: 1%;
+    margin-left: 40%;
+}
+
+a {
+    margin-left: 57%;
+    text-decoration: none;
+    color: rgba(0, 140, 255, 0.945);
+    text-shadow: 0px 0px 1px black;
+}
+
+input, select {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+input:focus {
+    background-color: aliceblue;
+    font-size: 120%;
+    color: rebeccapurple
+}
+
+button[type=submit]:hover {
+    color: goldenrod;
+}
+
+button[type=reset]:hover {
+    color: dimgray;
+}
