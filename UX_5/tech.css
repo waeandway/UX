@@ -1,0 +1,88 @@
+body {
+    background-color:rgba(235, 235, 235, 0.945);
+    font-weight: 600;
+}
+
+header {
+    margin: 20%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+nav {
+    position: fixed;
+    margin-left: 9%;
+    margin-top: 0%;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px 3px;
+}
+
+nav a:hover {
+    color : goldenrod;
+}
+
+article ol li {
+    list-style: none;
+    padding: 3px 3px;
+    font-weight: 400;
+}
+
+a, h1 {
+    text-decoration: none;
+    color: rgba(0, 140, 255, 0.945);
+    text-shadow: 0px 0px 1px black;
+}
+
+a:visited {
+    color: rgba(0, 140, 255, 0.945);
+}
+
+h2, h3 {
+    color: dimgray;
+    text-shadow: 0px 0px 1px black;
+}
+
+h1, h2 {
+    cursor: none;
+}
+
+tr {
+    color: dimgray;
+    text-shadow: 0px 0px 1px dimgray;
+}
+
+article {
+    display: inline-block;
+    margin: 20%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 60%;
+}
+
+p {
+    text-indent: 1%;
+    font-weight: 300;    
+}
+
+header p:first-letter {
+    color: dodgerblue;
+    font-size: 2em;
+    text-shadow: 0px 0px 2px black;    
+}
+
+aside {
+    display: inline-block;
+    margin: 20%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    width: 60%;
+}
+
+footer {
+    text-align: center;
+}
