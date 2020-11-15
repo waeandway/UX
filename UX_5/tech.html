@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Machine learning</title>
+        <style>
+            body {
+                background-color:rgba(235, 235, 235, 0.945);
+            }
+
+            h1 {
+                text-align: center;
+                color:rgba(0, 140, 255, 0.945);
+                text-shadow: 0px 0px 1px black;
+                cursor: none;
+            }
+
+            h2, h3 {
+                color: dimgray;
+                text-shadow: 0px 0px 1px black;
+                cursor: none;
+            }
+
+            ul {
+                border : 1px dotted rgba(0, 140, 255, 0.945);
+            }
+
+            a:link {
+                color:rgba(0, 140, 255, 0.945);
+                text-shadow: 0px 0px 1px black;
+                text-decoration: none;               
+            }
+            
+            a:visited  {
+                color:dimgray;
+                text-shadow: 0px 0px 1px black;
+                text-decoration: none;
+            }
+
+            p, li, td {
+                font-family: monospace;
+                text-indent: 1em;
+            }
+
+            footer {
+                border : 2px solid;
+                border-radius: 50px;
+            }
+
+            footer > p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>머신 러닝</h1>
+              <p> <!-- 참고: https://ko.wikipedia.org/wiki/기계_학습-->
+                머신 러닝(machine learning) 또는 기계 학습이란 경험을 통해 자동으로 개선하는 컴퓨터 알고리즘의 연구이다.
+                이는 인공지능의 한 분야로 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발한다. 
+                가령, 기계 학습을 통해서 수신한 이메일이 스팸인지 아닌지를 구분할 수 있도록 훈련할 수 있다.
+                기계 학습의 핵심은 표현(representation)과 일반화(generalization)에 있다. 표현이란 데이터의 평가이며, 
+                일반화란 아직 알 수 없는 데이터에 대한 처리이다. 이는 전산 학습 이론 분야이기도 하다. 다양한 기계 학습의 응용이 존재한다. 
+                문자 인식은 이를 이용한 가장 잘 알려진 사례이다.
+              </p>
+        </header>
+         <nav>
+             <h3>목차</h3>
+              <ul>
+                  <li><a href="#history">역사</a>
+                  <li><a href="#type">알고리즘 유형</a>
+                  <li><a href="#preview">관련 기술</a>      
+              </ul>
+         </nav>
+           <section>
+              <article id="history">
+                 <h2>역사</h2>
+                    <p>
+                        머신 러닝이라는 용어는 1959년 아서 사무엘(Arthur Samuel)의 논문에서 “명시적으로 프로그램을 작성하지 않고 컴퓨터에 학습할 수 있는 능력을 부여하기 위한 연구 분야”라고 최초 정의된 바 있다. 그 후 톰 미첼(Tom M. Mitchell)은 “컴퓨터 프로그램이 어떤 작업 T와 평가 척도 P에 대해서 경험 E로부터 학습한다는 것은, P에 의해 평가되는 작업 T에 있어서의 성능이 경험 E에 의해 개선되는 경우를 말한다”라고 더욱 형식적인 정의를 내린 바 있다.
+                        머신 러닝은 명시적인 알고리즘을 설계하기 어렵거나 프로그래밍하기 어려운 작업들을 해결하기 위해 주로 사용된다. 대부분의 머신 러닝 알고리즘은 먼저 데이터가 생성한 잠재적인 메커니즘의 특징을 파악하여 복잡한 관계를 정량화한 후, 이 식별된 패턴을 사용하여 새로운 데이터에 대한 예측을 실시한다. 머신 러닝은 데이터로부터 유용한 규칙, 지식 표현 혹은 판단 기준 등을 추출한다는 점에서 데이터마이닝이나 통계 및 수학적 최적화 문제와 관련이 깊다.
+                    </p>
+              </article>
+              <article id="type">
+                 <h2>알고리즘 유형</h2>
+                     <p>
+                        머신 러닝 알고리즘은 학습 시스템에 정보 및 데이터를 입력하는 형태에 따라 크게 세 가지로 나뉜다.<br>
+                        <ol type="1">
+                            <li>감독(supervised) 학습 : 입력과 이에 대응하는 미리 알려진 출력(인간 전문가가 제공)을 매핑(mapping)하는 함수를 학습하는 과정이다.<br>
+                            <li>비감독(unsupervised) 학습 : 출력 없이 입력만으로 모델을 구축하여 학습한다. 일반적으로 데이터마이닝의 대부분의 기법이 이에 해당한다.<br>
+                            <li>강화(reinforcement) 학습 : 학습자가 행동을 선택하여 행동으로 환경에 영향을 미치고, 이에 대한 피드백으로 보상치를 얻어 학습 알고리즘의 가이드로 사용한다.<br>                                           
+                        </ol>
+                     </p>
+              </article>
+              <article id="preview">
+                 <h2>관련 기술</h2>
+                      <p>
+                        머신 러닝은 컴퓨터 과학을 포함한 대부분의 모든 분야에서 활용되고 있으며, 컴퓨터 시각(문자 인식, 물체 인식, 얼굴 인식), 자연어 처리(자동 번역, 대화 분석), 음성 인식 및 필기 인식, 정보 검색 및 검색 엔진(텍스트마이닝, 스팸 필터, 추출 및 요약, 추천 시스템), 생물 정보학(유전자 분석, 단백질 분류, 질병 진단), 컴퓨터 그래픽 및 게임(애니메이션, 가상현실), 로보틱스(경로 탐색, 무인 자동차, 물체 인식 및 분류) 등의 분야에서 응용되고 있다.                    
+                      </p><br>
+                      <table>
+                          <tr>
+                              <td><img src="tech1.jpg" width="100" height="100" alt = "얼굴인식"></td>
+                              <td><img src="tech4.jpg" width="150" height="100" alt = "물체인식"></td>
+                              <td><img src="tech2.jpg" width="150" height="100" alt = "무인 자동차"></td>
+                              <td><img src="tech3.jpg" width="150" height="100" alt = "가상 현실"></td>
+                          </tr>
+                          <tr><td>얼굴인식</td><td>물체인식</td><td>무인 자동차</td><td>가상현실</td></tr>
+                      </table>
+              </article>
+           </section>
+           <aside>
+               <h3>딥러닝</h3>
+                 <p>
+                    머신 러닝의 한 분야로 데이터를 컴퓨터가 처리 가능한 형태인 벡터나 그래프 등으로 표현하고 이를 학습하는 모델을 구축하는 연구를 포함한다. 얼굴이나 표정을 인식하는 등의 특정 학습 목표에 대해, 딥 러닝은 학습을 위한 더 나은 표현 방법과 효율적인 모델 구축에 초점을 맞춘다. 딥 러닝의 표현방법들 중 다수는 신경과학에서 영감을 얻었으며, 신경 시스템의 정보 처리나 통신 패턴에 기반을 두고 있다.                                     
+                 </p><br>
+                 <a href="sign_in.html">회원가입</a>                 
+           </aside>
+        <footer>
+            <p>2020 Copyright KJY. All right reserverd</p>
+        </footer>        
+    </body>
+</html>
+
