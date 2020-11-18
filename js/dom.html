@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 객체</title>
+    <script src="dom.js"></script>
+</head>
+<body>
+    <h1>DOM 객체 p의 프로퍼티/스타일/이벤트</h1>
+    <hr>
+    <p id="firstP" style="color:blue; background-color: yellow;" onclick="this.style.color='teal'">
+        이것은 <span style="color:red;">첫 번째 문장입니다.</span>
+    </p>
+    <script>
+        var p1 = document.getElementById("firstP");
+        var text = "p1.id = " + p1.id + "\n";
+        text += "p1.tagName = " + p1.tagName + "\n";
+        text += "p1.innerHTML = " + p1.innerHTML + "\n";
+        text += "p1.sytle.color = " + p1.style.color + "\n";
+        text += "p1.onclick = " + p1.onclick + "\n";
+        text += "p1.childElement = " + p1.childElement + "\n";
+        text += "p1.offsetWidth = " + p1.offsetWidth + "\n";
+        text += "p1.offsetHeight = " + p1.offsetHeight + "\n"; 
+
+        alert(text);
+    </script>  
+
+    <!------------------------------------------------practice----------------------------------------->
+    <p id="secondP" style="color:red; background-color: yellow;">
+       이것은 <span style="color: blue;">두 번째 문장입니다.</span>
+    </p>
+    <script>
+        var p2 = document.getElementById("secondP"); // id가 secondP인 태그의 DOM 객체를 변수 p2에 저장
+        var text2 = "p2.id = " + p2.id + "\n";
+        text2 += "p2.previousElementSibling = " + p2.previousElementSibling + "\n"; // [object HTMLScriptElement]?
+        text2 += "p2.parentElement = " + p2.parentElement + "\n" // [object HTMLBodyElement]?
+
+        alert(text2);
+    </script>     
+</body>
+</html>
