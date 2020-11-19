@@ -37,5 +37,18 @@
 
         alert(text2);
     </script>     
+    <!-- css 동적변경 -->
+    <p style="color:blue">이것은 <span id="mySpan" style="color: red;">문장입니다.</span></p>
+    <input type="button" value="스타일 변경" onclick="change1()">
+
+    <!-- DOM객체의 innerHTML 프로퍼티 -->
+    <p id="picture" style="color: blue;" onclick="change2()">여기를 <span style="color: red;">클릭하세요</span></p>
+
+    <!-- this 키워드 -->
+    <button onclick="change3(this, '30px', 'red')">버튼</button>
+    <button onclick="change3(this, '30px', 'blue')">버튼</button>
+    <div onclick="change3(this, '20px', 'orange')">변경</div>
+
+
 </body>
 </html>
