@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id = "HEAD">
+    <meta charset="UTF-8">
+    <title>Document 객체의 주요 프로퍼티</title>
+    <script src="document.js"></script>
+    <script>var text = "문서 로딩 중일 때 readySate = " + document.readyState + "\n";</script>
+</head>
+<body style="background-color: lightblue; color: purple;" onload="documentProperties()">
+    <!-- 기본 -->
+    <h3>document의 주요 프로퍼티</h3>
+    <a href="http://www.naver.com">네이버</a>
+    <div>div 영역</div>
+    <input id = "input" type="text" value="DOM 객체의 메소드 focus()">
+    <br>
+    <!-- document의 getElementsByTagName()메소드로 DOM 객체 접근 -->
+    <h3>document의 getElementsByTagName()메소드로 DOM 객체 접근</h3>
+    <br><button onclick="change()">클릭</button>
+    첫 번째 <span>태그</span>, 두 번째 <span>태그</span>, 세 번째 <span>태그</span>, 네 번째 <span>태그</span>.
+         
+</body>
+</html>
