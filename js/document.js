@@ -11,8 +11,40 @@ function documentProperties() {
     text += "문서의 로드 완료 후 readyState = " + document.readyState + "\n";
     text += "activeElement = " + document.activeElement.value + "\n";
     text += "documentElement의 태그명 = " + document.documentElement.tagName + "\n"; // <html>태그이며, 대문자로 출력됨
+
     alert(text);
 }
+
+/* 추가-- 함수로 간단하게, alert는 여러 번 발생 */
+
+function repeat(x) {
+    var text;
+    text = x + "\n"
+    alert(text);    
+}
+
+k = document.documentElement.tagName;
+repeat(k);
+k = document.getElementsByTagName("h3");
+repeat(k);
+
+// getElementsByTagName() 메소드로 h3 컬렉션 배열 자동 생성
+function h3red() {
+    var r = document.getElementsByTagName("h3");
+    for(var a=0; a<r.length; a++) {
+        r[a].style.color = "red";
+    }
+}
+
+function h3purple() {
+    var p = document.getElementsByTagName("h3");
+    for(var b=0; b<p.length; b++) {
+        p[b].style.color = "purple";
+    }
+}
+
+
+///////////////////////////////////////////////////
 
 function change() {
     var spanArray = document.getElementsByTagName("span"); // document 객체의 "span" 이름을 가진 태그들(=컬렉션)을 변수 spanArray에 저장(하나의 컬렉션 배열 형태로 저장됨)
