@@ -18,16 +18,16 @@
                 document.write("<br>");
             }     
         }
-        var int = parseInt(prompt("정수를 입력하세요", ""));   
-        
+
+        var int = parseInt(prompt("정수를 입력하세요", ""));     
         if(isNaN(int)) {
             document.write("입력 오류입니다.");
         }
-        else if(int<0) {
+        else if(int<1) {
             document.write("입력 오류입니다.");
         }     
         else {
-            var n = printStar(int);
+            var num = printStar(int);  // *함수 호출 유의(document.write(printStar())로 했다가 망함)
         }     
     </script>    
 </body>
