@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>숙제3</title>
+</head>
+<body>
+    <h3>p.382 문제 3번</h3> <button onclick="showhide()">showhide</button>
+    <hr>
+    <ul>
+        <li>I (<span>love</span>) you.
+        <li>CSS is Cascading (<span>Style</span>) Sheet.
+        <li>응답하라 (<span>1988</span>).    
+    </ul>
+
+    <script>
+        function showhide() {
+            var span = document.getElementsByTagName("span");
+            for(i=0; i<span.length; i++) {
+                if(span[i].style.visibility == "visible") {
+                    span[i].style.visibility = "hidden";
+                }
+                else {
+                    span[i].style.visibility = "visible";
+                }
+            }           
+        }        
+    </script>    
+</body>
+</html>
