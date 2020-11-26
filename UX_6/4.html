@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>숙제4</title>
+</head>
+<body>
+    <h3>p.384 문제 6번</h3>
+    <hr>
+    <p id="p" onclick="text()">이번 여름에는 어디로 여행을 갈까요?</p>
+
+    <script>
+        function text() {
+            var text = prompt("텍스트를 입력하세요.", "");
+            var p = document.getElementById("p");
+            p.innerHTML = text
+        }
+    </script>    
+</body>
+</html>
