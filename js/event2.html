@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체</title>
+</head>
+<body>
+    <p id="p">버튼을 클릭하면 이벤트 객체 출력</p>
+    <button onclick="f(event)">클릭</button>
+    <script>
+        function f(e) {
+            var text = "type = " + e.type + "<br>"
+                     + "target = " + e.target + "<br>"
+                     + "currentTarget = " + e.currentTarget + "<br>"
+                     + "defaultPrevented = " + e.defaultPrevented;
+            var p = document.getElementById("p");
+            p.innerHTML = text;
+        }
+    </script>    
+</body>
+</html>
