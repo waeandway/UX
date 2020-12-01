@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 핸들링</title>
+</head>
+<body>
+    <h3>onclick</h3>
+    <script>
+        function caculate() {
+            var exp = document.getElementById("exp");
+            var res = document.getElementById("result");
+            result.value = eval(exp.value);
+        }
+    </script>
+    <form>
+        식 <input type="text" id="exp" value=""><br>
+        값 <input type="text" id="result">
+           <input type="button" value="계산" onclick="caculate()">
+    </form>
+    <h3>마우스 관련 리스너</h3>
+    <script>
+        var width = 1;
+        function down(obj) {
+            obj.style.fontStyle = "italic";
+        }
+        function up(obj) {
+            obj.style.fontStyle = "normal";
+        }
+        function over(obj) {
+            obj.style.borderColor = "violet";
+        }
+        function out(obj) {
+            obj.style.borderColor = "dimgray";
+        }
+        function wheel(e, obj) {   ///  오류? 휠에 따라 두께 조정이 안됨
+            if(e.wheelDelta < 0) {
+                width --;
+                if(width<0) {
+                    width =0;
+                }
+            }
+            else {
+                width++;
+            }
+            obj.style.borderStyle = "dotted";
+            obj.sytle.borderWidth = width + "px";
+        }
+
+    </script>
+    마우스 관련 <span onmousedown="down(this)"
+                      onmouseup="up(this)"
+                      onmouseover="over(this)"
+                      onmouseout="out(this)"
+                      onwheel="wheel(event,this)">이벤트</span>    
+</body>
+</html>
