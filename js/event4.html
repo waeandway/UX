@@ -52,6 +52,40 @@
                       onmouseup="up(this)"
                       onmouseover="over(this)"
                       onmouseout="out(this)"
-                      onwheel="wheel(event,this)">이벤트</span>    
+                      onwheel="wheel(event,this)">이벤트</span>
+                      
+    <h3>onmousemove</h3>
+    <img src="tech.jpg" onmousemove="where(event)"><br>
+    <div id = "div"></div>
+    <script>
+        var div = document.getElementById("div");
+        function where(e) {
+            var text = "버튼 = " + e.button + "<br>";
+                text += "(screenX, screenY) = " + e.screenX + ", " + e.screenY + "<br>";  // 스크린 기준 좌표
+                text += "(clientX, screenY) = " + e.clientX + ", " + e.clientY + "<br>"; // 브라우저 윈도우의 문서출력 영역 기준
+                text += "(offsetX, offsetY) = " + e.offsetX + ", " + e.offsetY + "<br>"; // 타겟 객체 기준 (타겟 객체 = img태그)
+                text += "(x, y) = " + e.x + ", " + e.y;  // 타겟 객체의 부모 기준 (타겟의 부모객체 = img태그의 부모태그 body태그)
+                div.innerHTML = text; 
+        }
+    </script>
+    <h3>oncontextmenu</h3>
+    <p id = "p">p</p>
+    <script>
+        function hideMenu() {
+            p = document.getElementById("p");
+            alert("stop");
+            return false; 
+        }
+        p.oncontextmenu = hideMenu; // oncontextmenu 리스너 등록
+
+        /* function hideMenu() {  
+            alert("sotp");
+            return false;
+        }
+        document.oncontextmenu = hideMenu; * / 브라우저 아무 곳이나 마우스 오른쪽 클릭 시 경고창 발생 */
+    </script>
+    
+
+    
 </body>
 </html>
