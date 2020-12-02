@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>폼과 이벤트 활용</title>
+        <script>
+            function checkField(obj) {
+                if(obj.value == "") {
+                    alert("enter name!");
+                    obj.focus();
+                } 
+            }
+        </script>
+    </head>
+    <body onload="document.getElementById('name').focus()">
+
+        <h3>onfocus와 onblur</h3>
+        <form>
+            이름 <input type="text" id="name" onblur="checkField(this)"><br><br>
+            학번 <input type="text">
+        </form>
+
+        <h3>선택된 라디오버튼 알아내기</h3>
+        <form>
+            <input type="radio" name="city" value="서울">서울
+            <input type="radio" name="city" value="부산">부산
+            <input type="radio" name="city" value="인천">인천
+            <input type="button" value="find checked" onclick="findChecked()">  
+        </form>
+        <script>
+            function findChecked() {
+                var found = null;
+                var city = document.getElementsByName("city");
+                for(var i=0; i<city.length; i++) {
+                    if(city[i].checked == true) {
+                        found = city[i];
+                    }
+                }
+                if(found != null) {
+                    alert("선택 : " + found.value);
+                }
+                else {
+                    alert("아무것도 선택되지 않음")
+                }
+            }
+        </script>
+        
+    </body>
+</html>
