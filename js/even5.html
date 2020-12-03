@@ -43,6 +43,32 @@
                 }
             }
         </script>
+
+        <h3>영수증</h3>
+        <form>
+            <input type="checkbox" name="모자" value="10000" onclick="calc(this)">모자 1만원
+            <input type="checkbox" name="구두" value="30000" onclick="calc(this)">구두 3만원
+            <input type="checkbox" name="가방" value="80000" onclick="calc(this)">가방 8만원
+            <br><br>
+            총 금액 <input type="text" id="sum" value="0">
+            
+        </form> 
+        <script>
+            var sum = 0;
+            function calc(x) {
+                if(x.checked) {
+                    sum += parseInt(x.value);
+                }
+                else {
+                    sum -= parseInt(x.value);
+                }
+                document.getElementById("sum").value = sum;
+            } 
+            // 응용 문제
+
+        </script>
+        
+
         
     </body>
 </html>
