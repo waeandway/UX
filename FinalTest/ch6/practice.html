@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>변수</title>
+    </head>
+    <body>
+        <h3>자바스크립트의 상수</h3>
+        <script>
+            var x = 123e-2; // 지수
+            document.write(x);
+            var y = null; // 키워드 null
+            document.write(y);
+        </script>
+        <h3>연산</h3>
+        <script>    
+            var a = 3; // 증감 연산
+            var b = a--; // 후위 연산
+            document.write("<br>" + a, b);
+            sum = a += b; // a = a+b
+            document.write("<br>" + sum + "<br>");
+            var k = (1>0) || (1>2); // 논리 연산(true/false 리턴)
+            document.write(k + "<br>");
+            var x = 2, y = 3, z=5;  // 조건 연산
+            var res = x>y ? x : z;
+            document.write(res);         
+        </script>
+        <h3>switch문</h3>
+        <script>
+            var price = 0;
+            var coffee = prompt("무슨 커피를 드릴까요?", "");
+            switch(coffee) {
+                case "espresso":
+                case "에스프레소": // "espresso"나 "에스프레소" 모두 실행
+                    price = 2000; break;
+                case "카푸치노":
+                    price = 3000; break;
+                case "카페라떼":
+                    price = 3500; break;
+                default:  // 어느 case과도 맞지 않을 때 (생략가능)
+                    document.write(coffee + "는 없습니다"); 
+            }
+            if(price != 0) {
+                document.write(coffee + "는 " + price + "원 입니다.");
+            }
+        </script>
+
+    </body>
+</html>
