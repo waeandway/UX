@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onload, Image객체</title>
+</head>
+<body onload="changeImage()">
+    <h3>onload로 이미지 크기 출력</h3>
+    <form>
+        <select id="select" onchange="changeImage()">
+            <option value="car.jpg">자동차
+            <option value="tech.jpg">인식기술
+        </select>
+        <span id="span">이미지 크기</span>
+    </form>
+    <img id="img" src="car.jpg">
+    <script>
+        function changeImage() {
+            var select = document.getElementById("select");
+            var img = document.getElementById("img");
+            img.onload = function () {
+                var span = document.getElementById("span");
+                span.innerHTML = img.width + "x" + img.height;
+            }
+            var index = select.selectedIndex;
+            img.src = select.options[index].value;
+        }
+    </script>
+    <hr>
+    <h3>new Image()로 이미지로딩</h3>
+    <img style="border: 20px ridge wheat" src="car.jpg" width="200" height="200" onclick="change(this)">
+    <script>
+        var files = ["car.jpg", "tech.jpg"]; // 이미지 파일 이름 배열
+        var imgs = new Array(); // 이미지 객체를 저장할 배열
+        
+        for(var i=0; i<files.length; i++) {
+            imgs[i] = new Image(); // 이미지 객체 생성
+            imgs[i].src = files[i]; // 이미지 객체의 주소 (이미지 로딩)
+        }
+
+        var next = 1;
+        function change(x) {
+            x.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        } 
+    </script>    
+</body>
+</html>
