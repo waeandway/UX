@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Window 객체</title>
+</head>
+<body>
+    <h3>윈도우 열기</h3>
+    <script>
+        function load(URL) {
+            window.open(URL, "window", "left=300, top=300, width=400, height=300");
+        }
+    </script>
+    <a href="javascript:load('http://www.naver.com')">네이버</a>
+    <a href="javascript:load('http://www.youtube.com')">유튜브</a>
+    
+    <hr>
+    <h3>윈도우 닫기</h3>
+    <script>
+        var newWin = null; // 새로 여는 윈도우 변수 지정, 일단 null 값으로 설정
+        function load(URL) {
+            newWin = window.open(URL, "window", "width=400, height=500, left=300, top=300, resizable=1,");
+        }
+        function closeWindow() { 
+            if(newWin == null || newWin.closed) // 윈도우가 아예 열려있지 않거나 닫힌 경우
+                return; // 그냥 리턴
+            else
+                newWin.close(); // 열어 놓은 윈도우 닫기
+        }
+    </script>
+    <button onclick="load('http://www.naver.com')">네이버</button><br>
+    <button onclick="window.close()">현재 윈도우 닫기</button><br> <!--IE에서만 가능, 현재 윈도우 = 이 html을 열어놓은 윈도우-->
+    <button onclick="window.closeWindow()">네이버 창 닫기</button>
+</body>
+</html>
