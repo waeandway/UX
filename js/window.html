@@ -31,5 +31,47 @@
     <button onclick="load('http://www.naver.com')">네이버</button><br>
     <button onclick="window.close()">현재 윈도우 닫기</button><br> <!--IE에서만 가능, 현재 윈도우 = 이 html을 열어놓은 윈도우-->
     <button onclick="window.closeWindow()">네이버 창 닫기</button>
+
+    <hr>
+    <h3>setTimeout()으로 네이버 페이지 자동 연결</h3>
+    <img id="img" src="tech.jpg" width="300" height="300" onmouseover="startTimer()" onmouseout="cancelTimer()">
+    <script>
+        var timerID = null;
+        function startTimer(time) {
+            timerID = setTimeout("load('http://www.naver.com')", 5000); // setTimeout() 메소드
+            document.getElementById("img").title = "5초 후 네이버가 열립니다.."; // 이미지에 마우스를 올리면 나타내는 툴팁 메시지
+        }
+        function cancelTimer() {
+            if(timerID == null) {
+                clearTimeout(timerID); // 매개변수 timerID의 타이머 해제
+            }
+        }
+        function load(url) {
+            window.location = url; // 현재 윈도우에 로드
+        }
+    </script>
+
+    <hr>
+    <h3>setInterval()로 텍스트 회전</h3>
+    <div>
+        <span id="span">텍스트가 자동 회전하며, 마우스로 클릭하면 중단.</span>
+    </div>
+    <script>
+        var span = document.getElementById("span");
+        var timerID = setInterval("rotate()", 200); // 0.2초마다 rotate()호출 - 무한반복
+
+        span.onclick = function (x) { // 익명 함수, 일회용
+            clearInterval(timerID);
+        }
+        
+        function rotate() {
+            var str = span.innerHTML;
+            var firstChar = str.substr(0,1); // str의 첫 문자
+            var remains = str.substr(1, str.length-1); // str의 나머지 문자열
+            str = remains + firstChar;
+            span.innerHTML = str;
+        }
+    </script>
+
 </body>
 </html>
