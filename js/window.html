@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Window 객체</title>
 </head>
-<body>
+<body onload="startScroll(1000)"> <!--83 줄 스크롤 관련 -->
     <h3>윈도우 열기</h3>
     <script>
         function load(URL) {
@@ -42,7 +42,7 @@
             document.getElementById("img").title = "5초 후 네이버가 열립니다.."; // 이미지에 마우스를 올리면 나타내는 툴팁 메시지
         }
         function cancelTimer() {
-            if(timerID == null) {
+            if(timerID != null) {
                 clearTimeout(timerID); // 매개변수 timerID의 타이머 해제
             }
         }
@@ -73,5 +73,21 @@
         }
     </script>
 
+    <hr>
+    <h3>윈도우 위치, 크기 조절</h3>
+    <button onclick="window.moveBy(-10,0)"> 왼쪽으로 10 이동</button>
+    <button onclick="resizeBy(10,10)">윈도우 크기 10씩 키우기</button>
+    <button onclick="moveTo(10,10)">이동</button>
+
+    <hr>
+    <h3>스크롤</h3>
+    <script>
+        function startScroll(time) {
+            setInterval("autoScroll()", time); // 1초에
+        }
+        function autoScroll() {
+            window.scrollBy(0,10); // 웹페이지가 10px 위로 이동 = 스크롤 다운
+        }
+    </script>
 </body>
 </html>
