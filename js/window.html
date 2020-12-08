@@ -89,5 +89,21 @@
             window.scrollBy(0,10); // 웹페이지가 10px 위로 이동 = 스크롤 다운
         }
     </script>
+
+    <hr>
+    <h3>location 객체로 웹 사이트 접속</h3>
+    사이트 선택 :
+    <select id="site">
+        <option value="http://www.naver.com">네이버
+        <option value="http://www.google.com">구글
+        <option value="http://microsoft.com">마이크로소프트
+    </select>
+    <button onclick="load()">로 이동</button>
+    <script>
+        function load() {
+            var select = document.getElementById("site");
+            window.location = select.options[select.selectedIndex].value;
+        }
+    </script>
 </body>
 </html>
