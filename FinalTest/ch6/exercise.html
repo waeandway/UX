@@ -4,6 +4,7 @@
     <title>실전 문제</title> <!-- 틀렸었던 부분은 X 로 표시 -->
 </head>
 <body>
+    <script src="6-1.js"></script>
     <h3>별 문자 출력하기</h3>
     <script>
         var int = parseInt(prompt("정수를 입력하세요.", ""));
@@ -32,5 +33,70 @@
         }
     </script>
 
+    <hr>
+    <div onmouseover="over(this)" onmouseout="out(this)">여기에 마우스를 올리면 배경색이 노란색으로 변합니다.</div> 
+
+    <hr>
+    <script>
+        var day = prompt("요일을 입력하세요!", "");
+        switch(day) { // 변수 day와
+            case "월": // 값 "월"과 일치하면 실행
+            case "화":
+            case "수":
+            case "목":
+                document.write(day +"요일은 출근!"); break;
+            case "금":
+            case "토":
+            case "일":
+                document.write(day +"요일은 휴일!"); break;
+            default:int
+                document.write("요일을 입력해주세요!");
+        }
+    </script>
+
+    <hr>
+    <h3>암호는 you</h3>
+    <script>
+        var pw = prompt("암호를 입력하시오", "");
+        if(pw != "you") {
+            document.write("암호가 틀렸습니다!");
+        }
+        else if(pw == "you") {
+            document.write("통과!");
+        }
+        /* 이건 if/else 문만 써서. 위와 같이 if/else if 만 사용해도 되고.
+        if(pw == "you") {
+            document.write("통과!");
+        }        
+        else {
+            document.write("암호가 틀렸습니다!");
+        }
+        */
+        document.write("<br>");
+        var password="";
+        do {
+	        password = prompt("암호를 대라", "암호");
+	        if(password == "you")
+		       break;
+            } while(true); // 무한반복
+            document.write("통과!");
+    </script>
+    
+    <hr>
+    <h3>함수로 연산</h3>
+    <script>
+        var b = big("625", "555");
+        document.write("큰 수 = " + b);
+        function big(x,y) {
+            x = parseInt(x);
+            y = parseInt(y);
+            if(x>y) {
+                return x;
+            }
+            else if(x<y) {
+                return y;
+            }           
+        }    
+    </script>
 </body>
 </html>
