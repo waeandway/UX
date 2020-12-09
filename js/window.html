@@ -107,6 +107,26 @@
     </script>
 
     <hr>
-    <h3></h3>
+    <h3>screen 객체</h3>
+    <button value="" onclick="printScreen()">printScreen()</button>
+    <div id="div"></div>
+    <script>
+        function printScreen() {
+            var text = "availHeight : " + screen.availHeight + "<br>";
+            text += "availWidth : " + screen.availWidth + "<br>";
+            text += "colorDepth : " + screen.colorDepth + "<br>";
+            text += "pixelDepth : " + screen.pixelDepth + "<br>";
+            text += "height : " + screen.height + "<br>";
+            text += "width : " + screen.width + "<br>";
+
+        document.getElementById("div").innerHTML = text;
+        }
+    </script>
+
+    <hr>
+    <h3>history 객체</h3>
+    <button onclick="history.back()">back</button> <!-- 이전 페이지 --> 
+    <button onclick="history.forward()">forward</button> <!-- 다음 페이지 -->
+    <button onclick="history.go(-1)">go(-1)</button> <!-- 현재 페이지에서 n만큼 이동 -->
 </body>
 </html>
