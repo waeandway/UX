@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>실습문제</title> <!-- 틀린 부분은 X로 표시되어있음 -->
+    </head>
+    <body>
+        <h3>Open Challenge 07</h3>
+        <script>
+            var itemlist = ["라면", "계란", "물", "파"];
+            
+            for(i=0; i<itemlist.length; i++) {
+                item = itemlist[i];
+                document.write("<li>" + item);
+            }
+        </script>
+        <hr>
+        <h3>1.</h3>
+        <script>
+            var n=[];
+            for(var i=0; i<10; i++) { // 난수 10개 배열에 저장
+                //n[i] = parseInt(prompt("1~100 까지의 정수를 입력하세요", ""));
+            }
+            for(var i=0; i<10; i++) {
+                document.writeln(n[i]);
+            }
+            document.write("<br>");
+            var big = n[0]; // big은 제일 큰 수 저장
+            for(var i=0; i<10; i++) { // 큰 수 찾기
+                if(big<n[i]) {
+                    big = n[i];              //  X
+                }                
+            }
+            document.write("제일 큰 수는 " + big);
+            document.write("<br>");
+            n.sort();                        //  Array객체의 메소드 .sort()
+            for(var i=0; i<10; i++) {
+                document.write(n[i]);
+            }
+        </script>
+        <h3>2.</h3>
+        <script>
+            document.write("<입력된 수의 배열>" + "<br>");
+            var num = new Array(5);
+            for(var i=0; i<num.length; i++) {
+                num[i] = parseInt(prompt("정수를 입력하세요", ""));
+                document.writeln(num[i]);
+            }
+            document.write("<br>" + "<역순으로 재정렬된 배열>" + "<br>");
+            num.reverse();
+            for(var i=0; i<5; i++) {
+                document.writeln(num[i]);
+            }
+            document.write("<br>" + "<가장 큰 수, 작은 수>" + "<br>");
+            var big = 0;
+            for(var i=0; i<5; i++) {
+                if(big<num[i]) {
+                    big = num[i];
+                }
+            }
+            var small = num[0];       // X
+            for(var i=0; i<5; i++) {
+                if(small>num[i]) {
+                    small = num[i];                    
+                }
+            }
+            document.write("가장 큰 수 = " + big);
+            document.write("<br>" + "가장 작은 수 = " + small);
+        </script>
+    </body>
+</html>

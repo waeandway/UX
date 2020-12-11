@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dom, document 객체</title>
+    </head>
+    <body>
+        <h3>예제 8-9</h3>
+        <textarea id="textarea" rows="10" cols="50">   
+        </textarea>
+        <br>
+        <button onclick="showHTML()">출력</button>
+
+        <Script>
+            var win = null;
+            function showHTML() {
+                if(win==null || win.closed) {
+                    win = window.open("", "outWin", width="300", height="200");
+                }
+                var textarea = document.getElementById("textarea");
+                win.document.open();
+                win.document.write(textarea.value);
+                win.document.close();
+            }
+        </Script>
+    </body>
+</html>
