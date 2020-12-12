@@ -13,6 +13,7 @@
                 document.write("<li>" + item);
             }
         </script>
+
         <hr>
         <h3>1.</h3>
         <script>
@@ -37,6 +38,8 @@
                 document.write(n[i]);
             }
         </script>
+        
+        <hr>   
         <h3>2.</h3>
         <script>
             document.write("<입력된 수의 배열>" + "<br>");
@@ -66,5 +69,76 @@
             document.write("가장 큰 수 = " + big);
             document.write("<br>" + "가장 작은 수 = " + small);
         </script>
+
+        <hr>
+        <h3>5.</h3>
+        <script>
+            var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+
+            for(var i=0; i<names.length; i++) {
+                document.writeln(names[i]);
+            }
+            document.write("<br>");
+
+            /*     X
+            var len = 0;                       
+            for(var i=0; i<4; i++) {
+                if(names[i].length>len) {
+                    len = names[i].length;
+                }
+            }
+            document.write(names[len]);    len 이 틀렸다. (배열인덱스가 아니라 길이를 나타내기 때문)
+            */
+            var longest = names[0]; // 정답            
+            for(var i=0; i<names.length; i++) {
+                if(names[i].length>longest.length) {
+                    longest = names[i];
+                }
+            }
+            document.write(longest + "<br>");
+
+            var former = names[0];
+            for(var i=0; i<names.length; i++) {
+                if(former>names[i]) {
+                    former = names[i];
+                }
+            }
+            document.write(former + "<br>");            
+        </script>
+
+        <hr>
+        <h3>6.</h3>
+        <script>
+            var a = new String(prompt("문자열 입력", ""));
+            var b = a.split("&");
+            for(var i=0; i<b.length; i++) {
+                document.writeln(b[i]);
+            }        
+        </script>
+
+        <hr>
+        <h3>7.</h3>
+        <script>
+            var colorNames = ["maroon", "red", "orange", "yellow", "olive", "purple",
+             "fuchsia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "gray"]
+                     
+            for(var i=0; i<colorNames.length; i++) {
+                document.write("<div style='display: inline-block; width: 60px; padding: 10px;");
+                document.write("background-color: " + colorNames[i] + "'>" + colorNames[i] + "</div>");   
+            }
+    
+            /* 정답
+            for(var i=0; i<colorNames.length; i++) {
+                var color = "<div style='display: inline-block;width: 60px;padding: 10px;background-color: ";
+                color += colorNames[i];
+                color += "'>" + colorNames[i] + "</div>";
+                document.write(color);
+            }
+            */
+            
+
+            
+        </script>
+        
     </body>
 </html>
