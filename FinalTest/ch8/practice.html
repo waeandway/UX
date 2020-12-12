@@ -2,8 +2,16 @@
 <html>
     <head>
         <title>dom, document 객체</title>
+        <script>
+            var elem = document.getElementById("myBody"); //여기서 elem은 dom객체 body 리턴 & body 태그 내 속성 값 저장, 즉 elem dom 객체는 null이 아님.
+            if(elem == null) {
+                alert("body is not made yet");
+            }
+        </script>
     </head>
-    <body>
+    <body id="myBody">
+        <p id="first">hello</p>
+        <!--
         <h3>예제 8-9</h3>
         <textarea id="textarea" rows="10" cols="50">   
         </textarea>
@@ -22,5 +30,6 @@
                 win.document.close();
             }
         </Script>
+        -->
     </body>
 </html>
