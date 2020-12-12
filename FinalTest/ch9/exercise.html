@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>실전 문제</title>
+    </head>
+    <body>
+        <hr>
+        <h3>click이벤트, dblclick이벤트</h3>
+        <span id="span">span</span>
+        <script>
+            document.getElementById("span").addEventListener("dblclick", dblclick);
+            
+            function dblclick(e) {
+                document.write(e.target);
+            }
+        </script>
+    </body>
+
+</html>

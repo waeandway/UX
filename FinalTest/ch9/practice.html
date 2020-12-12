@@ -35,5 +35,18 @@
                 e.stopPropagation();
             }
         </script>
+
+        <hr>
+        <h3 id="h3">onload 연습</h3>
+        <script>
+            //document.getElementById("h3").onload = function () {alert("Hi!")}
+            var h3 = document.getElementById("h3");
+            h3.addEventListener("click", click);
+
+            function click(e) {
+                var t = e.target;
+                document.write(t);
+            }
+        </script>
     </body>
 </html>
