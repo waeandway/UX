@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이벤트</title>
+    </head>
+    <body>
+        <form id="form" onclick="stop(event)"> <!-- (4) HTML 태그 내에 이벤트 리스너 등록, event는 이벤트(click)객체, default인 버블단계에서 리스너 실행 -->
+            <input type="button" id="button" value="클릭">
+        </form>
+        <div id="div" style="color:green;"></div>
+
+        <script>
+            var div = document.getElementById("div");
+            var button = document.getElementById("button");
+
+            document.body.addEventListener("click", capture, true); // body 객체에 리스너 등록 (true -> 캡처 단계)
+            button.addEventListener("click", bubble, false); // input 객체에 리스너 등록 (false -> 버블 단계)
+            document.body.addEventListener("click", bubble, false); // body 객체에 리스너 등록 (false -> 버블 단계)
+
+            //document.getElementById("form").addEventListener("click", stop, false);    <-- (1) addEventListener()메소드 이용, false 키워드로 버블단계에서 리스너 실행
+            //document.getElementById("form").onclick = stop;    <-- (2) DOM객체의 이벤트리스너프로퍼티에 stop리스너(함수) 등록, default인 버블단계에서 리스너 실행
+            //document.getElementById("form").onclick = function(e) {e.stopPropagation();}; <-- (3) 익명함수로 리스너 등록, e는 이벤트(click)객체, default인 버블단계에서 리스너 실행
+
+            function capture(e) {  // e는 이벤트 객체
+                var obj = e.currentTarget;
+                var tagName = obj.tagName;
+                div.innerHTML += "<br>capture 단계 : " + tagName + "태그" + e.type + "이벤트";
+            }
+            function bubble(e) {  // e는 이벤트 객체
+                var obj = e.currentTarget;
+                var tagName = obj.tagName;
+                div.innerHTML += "<br>bubble 단계 : " + tagName + "태그" + e.type + "이벤트";
+            }
+            function stop(e) {   // e는 이벤트 객체
+                e.stopPropagation();
+            }
+        </script>
+    </body>
+</html>
