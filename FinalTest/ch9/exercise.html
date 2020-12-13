@@ -57,6 +57,27 @@
                     e.target.style.textDecoration = "none";
                 }
             }
+        </script>
+
+        <hr>
+        <h3>8.</h3>
+        <p>겨울방학 떄 할 것</p>
+        <ul>
+            <li id="1">다변수 미적분</li>
+            <li id="2">선형대수</li>
+            <li id="3">공학수학</li>
+            <li id="4">C 알고리즘</li>
+        </ul>
+        <script>
+            var li = document.getElementsByTagName("li");
+            for(var i=0; i<li.length; i++) {
+                li[i].onclick = function(e) {
+                    for (var i=0; i<li.length; i++) {  // X (반복문으로 안써서 틀렸었다.)
+                        li[i].style.fontSize = "1em";
+                    }                        
+                e.target.style.fontSize = "1.3em";
+                }                
+            }
         </script>  
     </body>
 </html>
