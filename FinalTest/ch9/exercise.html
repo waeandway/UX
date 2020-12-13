@@ -78,6 +78,46 @@
                 e.target.style.fontSize = "1.3em";
                 }                
             }
-        </script>  
+        </script>
+
+        <hr>
+        <h3>9.</h3>    <!-- X 처음부터 끝까지 -->
+        <div id="div" style="position:absolute"></div>
+        <script>
+            var li = document.getElementsByTagName("li");
+            var text = ["1", "2", "3", "4"];
+            var div;
+            function init() {   // 왜 body태그에 init 리스너를 따로 등록해야하는가?
+                div = document.getElementById("div");
+            }
+
+            for(var i=0; i<li.length; i++) {
+                li[i].onmouseover = over;
+                li[i].onmouseout = out;
+                
+            }
+
+            function over(e) { // e는 mouseover 이벤트 객체
+                var n = 0;
+                switch(e.target.id) {
+                    case "1" : n=0; break;
+                    case "2" : n=1; break; 
+                    case "3" : n=2; break;
+                    case "4" : n=3; break;
+                }
+                showDiv(text[n], e);   // e는 무엇인가?  --> e는 mouseover 이벤트 객체
+            }
+            function showDiv(x, e) {
+                div.innerHTML = x;
+                div.style.visibility = "visible";
+                div.style.left = e.clientX + "px"; // --> e는 mouseover 이벤트 객체
+                div.style.top = e.clientY + "px"; // --> e는 mouseover 이벤트 객체
+                div.style.border = "solid 1px";
+                div.style.backgroundColor = "yellowgreen";
+            }
+            function out() {
+                div.style.visibility = "hidden";
+            }
+        </script>   
     </body>
 </html>
