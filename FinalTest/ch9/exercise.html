@@ -3,7 +3,7 @@
     <head>
         <title>실전 문제</title>
     </head>
-    <body>
+    <body onload="init()">
         <hr>
         <h3>click이벤트, dblclick이벤트</h3>
         <span id="span">span</span>
@@ -12,6 +12,31 @@
             
             function dblclick(e) {
                 document.write(e.target);
+            }
+        </script>
+
+        <hr>
+        <h3>5.</h3>
+        <script>
+            document.body.ondblclick = function() {
+                this.style.backgroundColor = "yellowgreen";   
+            }
+        </script> 
+        
+        <hr>
+        <h3>6.</h3>
+        <img src="tech2.jpg" onwheel="wheel(event, this)" width="100">  <!-- X event객체, this키워드 동시 사용 -->
+        <script>
+            function wheel(e, obj) {
+                if(e.wheelDelta<0) {
+                    obj.width--
+                    if(obj.width<0) {
+                        obj.width = 0;   // X
+                    }                   
+                }
+                else {
+                    obj.width++
+                }
             }
         </script>
     </body>
