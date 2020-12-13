@@ -55,7 +55,21 @@
             }
             acc();
             document.write("합 = " + sum);
+        </script>
 
+        <hr>
+        <h3>구구단</h3>
+        <script>
+            var n = prompt("구구단 몇 단을 원하세요?", "");
+            gugudan(n);
+
+            function gugudan(x) {
+                var m = parseInt(x);
+                if(isNaN(m) || m<1 || m>9) {
+                    alert("잘못입력하셨습니다.");
+                    return;
+                }
+            }
         </script>
 
     </body>
