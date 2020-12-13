@@ -2,6 +2,21 @@
 <html>
     <head>
         <title>실전 문제</title>
+        <style>
+            table 
+            {
+                text-align: center;
+                border: hidden;
+            } 
+            td
+            {
+                width: 100px;
+            }
+            input
+            {
+                width: 90%;
+            }
+        </style>
     </head>
     <body onload="init()">
         <hr>
@@ -118,6 +133,61 @@
             function out() {
                 div.style.visibility = "hidden";
             }
-        </script>   
+        </script>
+        
+        <h3>계산기 만들기</h3>   <!-- 번외 -->
+        <hr>
+        <input type="text" id="cal" value="" style="width:99%"> 
+        <table border="0" style="width:100%; height:100%;">
+            <tr colspan=4 > 
+                <td><input type="button" value="back" onclick="back()"></td>  
+                <td><input type="button" value="CE" onclick="clear()"></td>  
+                <td><input type="button" value="C" onclick="clear()"></td>  
+                <td><input type="button" value="=" onclick="equal()"></td>  
+            </tr> 
+            <tr> 
+                <td><input type="button" value="7" onclick="number('7')"></td>  
+                <td><input type="button" value="8" onclick="number('8')"></td>  
+                <td><input type="button" value="9" onclick="number('9')"></td>  
+                <td><input type="button" value="/" onclick="number('/')"></td>  
+            </tr> 
+            <tr> 
+                <td><input type="button" value="4" onclick="number('4')"></td>  
+                <td><input type="button" value="5" onclick="number('5')"></td>  
+                <td><input type="button" value="6" onclick="number('6')"></td>  
+                <td><input type="button" value="*" onclick="number('*')"></td>  
+            </tr> 
+            <tr> 
+                <td><input type="button" value="1" onclick="number('1')"></td>  
+                <td><input type="button" value="2" onclick="number('2')"></td>  
+                <td><input type="button" value="3" onclick="number('3')"></td>  
+                <td><input type="button" value="-" onclick="number('-')"></td>  
+            </tr> 
+            <tr> 
+                <td><input type="button" value="0" onclick="number('0')"></td>  
+                <td><input type="button" value="+" onclick="number('+')"></td>  
+                <td><input type="button" value="NONE"></td> 
+                <td><input type="button" value="NONE"></td> 
+            </tr> 
+        </table> 
+
+        <script>
+            var cal = document.getElementById("cal");
+            function number(text) {
+                cal.value += text;
+            }
+            function equal() {
+                cal.value = eval(cal.value);
+            }
+            function clear() {
+                cal.value = " ";
+            }
+            function back() {
+                length = cal.value.length; // 문자열의 길이(r)
+                cal.value = cal.value.substring(0, length-1);
+                var expression = cal.value.toString(); // toString() 메소드 ?
+                cal.value = expression;
+            }   
+        </script>
     </body>
 </html>
