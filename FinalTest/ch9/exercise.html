@@ -39,6 +39,24 @@
                 }
             }
         </script>
-    </body>
 
+        <hr>
+        <h3>7.</h3>
+        <p>
+            span 태그에만 <span>마우스</span>가 올라올 때 밑줄이 그어지고 <span>마우스</span>가 내려갈 때 밑줄이 사라지도록
+            <span>자바스크립트 코드</span>를 작성한다.
+        </p>
+        <script>
+            window.onmouseover = function(e) {          
+                if(e.target.tagName == "SPAN") {
+                    e.target.style.textDecoration = "underline";
+                }            
+            }
+            window.onmouseout = function(e) {
+                if(e.target.tagName == "SPAN") {
+                    e.target.style.textDecoration = "none";
+                }
+            }
+        </script>  
+    </body>
 </html>
