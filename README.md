@@ -1,4 +1,7 @@
-## UX 프로그래밍 전공수업
+# UX Programming
 
-### UX_1 ~ UX_6 : 과제
-### Test,Test2,FinalTest : 중간, 기말
+### Directory [UX_1 ~ UX_6]()
+`과제내용 정리 및 추가자습`
+
+### Directory [Test/Test2/FinalTest]()
+`중간/기말 대비 코드 정리`
